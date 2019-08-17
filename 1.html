@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Ball_fallowing_robot</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="https://github.com/kiranchinta23/Ball_fallowing_robot.git" class="logo">
+									<span class="symbol"><img src="images/github.png" alt="" /></span><span class="title">Github link</span>
+								</a>
+
+								<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+						</div>
+					</header>
+
+					<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="1.html">Ball Chasing robot</a></li>
+							<li><a href="02.html">Sensor Fusion</a></li>
+							<li><a href="2.html">Localization</a></li>
+							<li><a href="3.html">SLAM</a></li>
+							<li><a href="4.html">Path Planning & Navigation</a></li>
+							<li><a href="5.html">Lane finding</a></li>
+							<li><a href="6.html">Image Classification</a></li>
+							<li><a href="7.html">Behaviour cloning</a></li>
+							<li><a href="8.html">Nvidia: Deep Learning for Robotics</a></li>
+							<li><a href="9.html">Driver Distraction Detection</a></li>
+						</ul>
+					</nav>
+
+				
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Ball Chasing Robot</h1>
+							<span class="image main"><img src="gif/ball_chasing.gif" alt="" /></span>
+							<h3>Summary of Tasks</h3>
+							<p>In this project, two ROS packages are created inside catkin_ws/src: the drive_bot and the ball_chaser. Here are the steps to design the robot, house it inside the world, and program it to chase white-colored balls:</p>
+							<h4>1.drive_bot:</h4>
+							<ul style="list-style-type:disc;">
+									<li>Create a my_robot ROS package to hold the robot, the white ball, and the world.</li>
+									<li>Design a differential drive robot with the Unified Robot Description Format. Add two sensors to the robot: a lidar and a camera. Add Gazebo plugins for your robot’s differential drive, lidar, and camera. Implement significant changes such as adjusting the color, wheel radius, and chassis dimensions</li>
+									<li>House the robot inside the world.</li>
+									<li>Add a white-colored ball to the Gazebo world and save a new copy of this world.</li>
+									<li>The world.launch file should launch the world with the white-colored ball and the robot.</li>
+								  </ul>
+							<h4>2.ball_chaser:</h4>
+							<ul style="list-style-type:disc;">
+								<li>Create a ball_chaser ROS package to hold your C++ nodes.</li>
+								<li>Write a drive_botC++ node that will provide a ball_chaser/command_robot service to drive the robot by controlling its linear x and angular z velocities. The service should publish to the wheel joints and return back the requested velocities.</li>
+							 	<li>Write a process_image C++ node that reads the robot’s camera image, analyzes it to determine the presence and position of a white ball. If a white ball exists in the image, the node should request a service via a client to drive the robot towards it.</li>
+								<li>The ball_chaser.launch should run both the drive_bot and the process_image nodes.</li>
+							</ul>
+							<h4>3.folder_hierarchy:</h4>
+							<span ></span><img src="images/img1.png" alt="" /></span>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<form method="post" action="#">
+								<div class="field">
+									<h3>Phone</h3>
+									<p>(408) 796-9553</p>
+								</div>
+								<div class="field">
+									<h3>Email</h3>
+									<p>kiran.chinta23@gmail.com</p>
+								</div>
+								
+								
+							</form>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons">
+								<li><a href="https://github.com/kiranchinta23" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/kiran-chinta23/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+							</ul>
+						</section>
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

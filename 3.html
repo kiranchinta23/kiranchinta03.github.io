@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SLAM</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="https://github.com/kiranchinta23/SLAM.git" class="logo">
+									<span class="symbol"><img src="images/github.png" alt="" /></span><span class="title">Github link</span>
+								</a>
+
+							<!-- Nav -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+							
+						</div>
+					</header>
+
+					<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="1.html">Ball Chasing robot</a></li>
+							<li><a href="02.html">Sensor Fusion</a></li>
+							<li><a href="2.html">Localization</a></li>
+							<li><a href="3.html">SLAM</a></li>
+							<li><a href="4.html">Path Planning & Navigation</a></li>
+							<li><a href="5.html">Lane finding</a></li>
+							<li><a href="6.html">Image Classification</a></li>
+							<li><a href="7.html">Behaviour cloning</a></li>
+							<li><a href="8.html">Nvidia: Deep Learning for Robotics</a></li>
+							<li><a href="9.html">Driver Distraction Detection</a></li>
+						</ul>
+					</nav>
+
+				
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>SLAM</h1>
+							<span class="image main"><img src="gif/mapping.gif" alt="" /></span>
+							<p>RTAB-Map (Real-Time Appearance-Based Mapping) is a popular solution for SLAM to develop robots that can map environments in 3D. RTAB-Map has good speed and memory management, and it provides custom developed tools for information analysis. </p>
+							<h4>summary:</h4>
+							<ul style="list-style-type:disc;">
+								<li>ROS package is created that launches a custom robot model in a custom Gazebo world.</li>
+								<li>Add RGDB camer link in URDF and add this configuration in gazebo</li>
+								<li>Create mapping.launch file in launch folder</li>
+								<li>Add RTABMAPRVIZ node to the mapping.launch file.</li>
+								<li>Launch world.launch, mapping.launch, telop package.</li>
+								<li>Our goal is to create a great map with the least amount of passes as possible. Getting 3 loop closures will be sufficient for mapping the entire environment. You can maximize your loop closures by going over similar paths two or three times. This allows for the maximization of feature detection.</li>
+							</ul>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<form method="post" action="#">
+								<div class="field">
+									<h3>Phone</h3>
+									<p>(408) 796-9553</p>
+								</div>
+								<div class="field">
+									<h3>Email</h3>
+									<p>kiran.chinta23@gmail.com</p>
+								</div>
+								
+								
+							</form>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons">
+								<li><a href="https://github.com/kiranchinta23" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/in/kiran-chinta23/" class="icon brands style2 fa-linkedin"><span class="label">Linkedin</span></a></li>
+							</ul>
+						</section>
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
